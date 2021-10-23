@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp website</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/chatting_page.css">
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                    <div class="profile-view">
+                    <h1 class="name">
+                            <%= usr_name %> 
+                    </h1>
+                </div> 
+
+                <% userdata.forEach(function (element) { %>
+                    <div class="usernames">
+                        <ul>
+                            <a>
+                                
+                                <%= element.email_addr %>
+                            </a>
+                        </ul>
+                    </div>
+                <% }); %>       
+                    
+            </div>
+            <div class="column">
+                <h1>Messages</h1>
+            </div>
+        </div>
+    </body>
+</html>

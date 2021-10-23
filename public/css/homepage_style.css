@@ -1,0 +1,24 @@
+body {
+    background-color: darkturquoise;
+}
+
+ .login_page {
+    padding: 10% 23%;
+    margin: 10rem 15rem;
+    background-image: url("/images/whatsapp_img.PNG");
+}
+
+ #welcome {
+    text-align: center;
+} 
+
+#signup {
+    margin-left: 2rem;
+}
+
+/*
+.buttons {
+    margin-left: 2rem;
+}
+*/
+
