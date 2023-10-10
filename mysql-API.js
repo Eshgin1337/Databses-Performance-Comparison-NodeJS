@@ -14,7 +14,7 @@ var con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "CREATE TABLE if not exists users (email VARCHAR(255), address VARCHAR(255))";
+    var sql = "CREATE TABLE if not exists users (email VARCHAR(255), password VARCHAR(255))";
     con.query(sql, function (err, result) {
         if (err) throw err;
     });
@@ -28,11 +28,10 @@ app.use(express.json());
 app.post("/signup", function (req, res) {
     email = req.body.email;
     password = req.body.password;
-
-    var insertScript = `insert into users (email, password) values (${email}, ${password})`;
+    var insertScript = `insert into users values ("${email}", "${password}")`;
     con.query(insertScript, function (err, result) {
         if (err) throw err;
-        console.log("Row inserted");
+        res.status(200).send("Row inserted");
     });
 });
 
