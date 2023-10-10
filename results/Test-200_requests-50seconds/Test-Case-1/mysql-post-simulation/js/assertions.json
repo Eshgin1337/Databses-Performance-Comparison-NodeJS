@@ -1,0 +1,10 @@
+{
+  "simulation": "MySQLTest.MySQLPostSimulation",
+  "simulationId": "mysqlpostsimulation-20231010183451246",
+  "start": 1696962892093,
+  "description": "",
+  "scenarios": ["MySQL Post Test"],
+  "assertions": [
+
+  ]
+}

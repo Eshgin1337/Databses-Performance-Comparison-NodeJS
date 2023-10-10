@@ -7,14 +7,14 @@ const app = express();
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "12345",
+    password: "Esqin2002@",
     database: "users"
 });
 
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "CREATE TABLE if not exists users (email VARCHAR(255), password VARCHAR(255))";
+    var sql = "CREATE TABLE if not exists users (email VARCHAR(255), password VARCHAR(512))";
     con.query(sql, function (err, result) {
         if (err) throw err;
     });
@@ -29,7 +29,7 @@ app.post("/signup", function (req, res) {
     email = req.body.email;
     password = req.body.password;
     var insertScript = `insert into users values ("${email}", "${password}")`;
-    con.query(insertScript, function (err, result) {
+    con.query(insertScript, function (err) {
         if (err) throw err;
         res.status(200).send("Row inserted");
     });
