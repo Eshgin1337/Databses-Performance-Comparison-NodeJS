@@ -32,7 +32,9 @@ Before running the tests, ensure that you have the following software installed 
 ```
 
 2. **Install necessary libraries:**
-
+```bash
+    npm i
+```
 ### MongoDB Configuration
 * No specific configuration needed. Just MongoDB server being installed on your computer is enough.
 * Run MongoDB API using:
