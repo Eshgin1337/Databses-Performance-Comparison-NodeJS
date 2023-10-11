@@ -47,7 +47,7 @@ Before running the tests, ensure that you have the following software installed 
 ```sql
     create database users;
 ```
-* In mysql-API.js, update the connection details:
+* In mysql-API.js inside the downloaded repository, update the connection details:
 ```javascript
     var con = mysql.createConnection({
         host: "localhost",
